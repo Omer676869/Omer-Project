@@ -13,6 +13,9 @@ body {
               #f6f6ff;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -20,6 +23,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
@@ -103,4 +108,34 @@ footer {
   text-align: center;
   padding: 15px 0;
   font-size: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  width: 100%;
+  padding: 20px;
+}
+
+.inputContainer input {
+  width: 80%;
+  height: 50px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
 }
