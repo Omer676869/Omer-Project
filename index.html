@@ -3,33 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Bixx AI - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   </head>
   <body>
-    <header>
+   <header>
       <div class="container">
-        <h1>My Website</h1>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="header__wrap">
+          <div class="logo"><img src="images/logo.png" width="80px"></div>
+          <h1>Bixx AI - By Omer</h1>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav> 
+        </div>
+   </div>
     </header>
 
     <main>
-      <div class="inputContainer">
-        <input type="text" placeholder="Enter your message" />
+      <div class="Answer" id="Answer">
+        <p>The Answer Will Appear Here</p>
+      </div>
+
+      <div class="InputC">
+        <div class="container">
+          <input id="Input">
+          <button onclick="go()">Send</button>
+        </div>
       </div>
     </main>
 
     <footer>
       <div class="container">
+        <div class="footer__wrap">
+          <div class="footer__logo">
+            <img src="images/logo.png" alt="" />
+            <p>Bixx AI - By Omer.</p>
+          </div>
+          <div class="footer__menu">
+            <div class="footer_up">
+              <nav class="footer__menu">
+              </nav>
+            </div>
+            <div class="footer_mid">
+              <div class="item">Email: omer@omer.com</div>
+              <div class="item">Phone: 123123123</div>
+              <div class="item">
+                <a href="https://bixx.vercel.app" target="_blank">Real Website</a> 
+              </div>
+            </div>
+            <div class="footer_down">
+            </div>
+          </div>
+        </div>
         <p>© 2025 My Website. All rights reserved.</p>
       </div>
     </footer>
+
+
+  <script>
+    function go(){
+      fetch("https://abs83bsmf09271d.vercel.app/text/" + encodeURIComponent(Input.value))
+        .then(r=>r.text())
+        .then(t=>document.querySelector("#Answer p").innerText = t);
+    }
+  </script>
   </body>
 </html>
